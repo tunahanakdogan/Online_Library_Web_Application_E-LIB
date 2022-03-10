@@ -1,0 +1,16 @@
+C:\Users\tunah\Desktop\elib_project\elib_business\bin\Debug\net5.0\elib_business.deps.json
+C:\Users\tunah\Desktop\elib_project\elib_business\bin\Debug\net5.0\elib_business.dll
+C:\Users\tunah\Desktop\elib_project\elib_business\bin\Debug\net5.0\ref\elib_business.dll
+C:\Users\tunah\Desktop\elib_project\elib_business\bin\Debug\net5.0\elib_business.pdb
+C:\Users\tunah\Desktop\elib_project\elib_business\bin\Debug\net5.0\elib_data.dll
+C:\Users\tunah\Desktop\elib_project\elib_business\bin\Debug\net5.0\elib_entity.dll
+C:\Users\tunah\Desktop\elib_project\elib_business\bin\Debug\net5.0\elib_entity.pdb
+C:\Users\tunah\Desktop\elib_project\elib_business\bin\Debug\net5.0\elib_data.pdb
+C:\Users\tunah\Desktop\elib_project\elib_business\obj\Debug\net5.0\elib_business.csproj.AssemblyReference.cache
+C:\Users\tunah\Desktop\elib_project\elib_business\obj\Debug\net5.0\elib_business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tunah\Desktop\elib_project\elib_business\obj\Debug\net5.0\elib_business.AssemblyInfoInputs.cache
+C:\Users\tunah\Desktop\elib_project\elib_business\obj\Debug\net5.0\elib_business.AssemblyInfo.cs
+C:\Users\tunah\Desktop\elib_project\elib_business\obj\Debug\net5.0\elib_business.csproj.CoreCompileInputs.cache
+C:\Users\tunah\Desktop\elib_project\elib_business\obj\Debug\net5.0\elib_business.dll
+C:\Users\tunah\Desktop\elib_project\elib_business\obj\Debug\net5.0\ref\elib_business.dll
+C:\Users\tunah\Desktop\elib_project\elib_business\obj\Debug\net5.0\elib_business.pdb

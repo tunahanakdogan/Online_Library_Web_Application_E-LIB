@@ -1,0 +1,51 @@
+@{
+    Layout = "_Layout2";
+}
+@model CategoryListModel
+<div class="col-md-12">
+    <h1 class="text-center">Admin Category List</h1>
+    <hr>
+    <a asp-controller="admin" asp-action="addcategory" style="padding-right: 40px;"
+        class="btn btn-secondary text-light nav-link fs-5">Add
+        Category</a>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+
+
+            </tr>
+
+        </thead>
+        <tbody>
+            @if (Model.Categories.Count > 0)
+            {
+                @foreach (var item in Model.Categories)
+                {
+                    <tr>
+                        <td>@item.categoryId</td>
+                        <td>@item.name</td>
+
+                        <td>
+                            <a asp-controller="admin" asp-action="editcategory" asp-route-id="@item.categoryId"
+                        class="btn btn-primary btn-sm mr-2">Edit</a>
+                            <form asp-controller="admin" asp-action="deletecategory" method="POST" style="display: inline;">
+                                <input type="hidden" name="categoryId" value="@item.categoryId">
+                                <button class="btn btn-danger btn-sm mr-2" type="submit">Delete</button>
+                            </form>
+
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <div class="alert alert-warning">
+                    <h2>No Category Added</h2>
+                </div>
+            }
+        </tbody>
+    </table>
+</div>

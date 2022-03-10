@@ -1,0 +1,34 @@
+@model LoginModel
+@{
+    Layout = "_Layout2";
+}
+
+
+
+<h2>Login</h2>
+<hr>
+
+<form asp-controller="account" asp-action="login" method="POST">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <input name="urlToGo" value="@Model.urlToGo" type="hidden">
+    <div class="form-group row">
+        <label class="col-sm2 col-form-laber">User Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" asp-for="userName">
+            <span asp-validation-for="userName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm2 col-form-laber">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" asp-for="password">
+            <span asp-validation-for="password" class="text-danger"></span>
+        </div>
+    </div>
+    <div style="background-color: white; color:white; heigth: 20px" class="container">space</div>
+    <div class="form-group row">
+
+        <button style="width: 500px;" type="submit" class="btn btn-warning mx-auto">Login</button>
+
+    </div>
+</form>

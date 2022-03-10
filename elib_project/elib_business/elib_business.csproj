@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+         <ProjectReference Include="..\elib_entity\elib_entity.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+         <ProjectReference Include="..\elib_data\elib_data.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,86 @@
+@{
+    Layout = "_Layout2";
+}
+@model BookModel
+<h2 class="text-center">Edit Book</h2>
+<hr>
+<form asp-controller="admin" asp-action="EditBook" method="POST">
+    <div class="row">
+        <div class="col-md-8">
+
+            <input type="hidden" name="bookId" value="@Model.bookId">
+            <div class="form-group row">
+                <label class="col-sm2 col-form-laber">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="name">
+                    <span asp-validation-for="name" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm2 col-form-laber">Book Url</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="bookUrl">
+                    <span asp-validation-for="bookUrl" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm2 col-form-laber">Author</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="author">
+                    <span asp-validation-for="author" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm2 col-form-laber">Image Url</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="imgUrl">
+                    <span asp-validation-for="imgUrl" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm2 col-form-laber">Name Url</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="url">
+                    <span asp-validation-for="url" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm2 col-form-laber">Description</label>
+                <div class="col-sm-10">
+
+                    <textarea type="text" class="form-control" asp-for="description"></textarea>
+                    <span asp-validation-for="description" class="text-danger"></span>
+                </div>
+            </div>
+            <div style="background-color: white; color:white; heigth: 20px" class="container">space</div>
+            <div class="form-group row">
+                <div class="col-sm-10 offset-sm-2">
+                    <button style="width: 200px;" type="submit" class="btn btn-success">Save</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+            @for (int i = 0; i < Model.CategoriesOfBook.Count; i++)
+            {
+                <input type="hidden" name="CategoriesOfBook[@i].categoryId" value="@Model.CategoriesOfBook[@i].categoryId">
+                <input type="hidden" name="CategoriesOfBook[@i].name" value="@Model.CategoriesOfBook[@i].name">
+            }
+            @foreach (var category in (List<Category>)ViewBag.AllCategories)
+            {
+                <div class="custom-control custom-checkbox">
+                    <input name="categoryId" value="@category.categoryId" type="checkbox" class="custom-control-input"
+                    id="category_@(category.categoryId)" @(Model.CategoriesOfBook.Any(c=>c.categoryId ==
+                    category.categoryId)?"checked":"")>
+                    <label for="category_@(category.categoryId)" class="custom-control-label">@category.name</label>
+                </div>
+
+            }
+        </div>
+    </div>
+</form>

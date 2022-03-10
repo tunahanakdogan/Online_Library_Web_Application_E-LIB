@@ -1,0 +1,19 @@
+<div class="list-group">
+
+    @foreach (var category in Model)
+    {
+
+
+        if (ViewBag.SelectedCategory == category.url)
+        {
+            <a asp-controller="Library" asp-action="List" asp-route-category="@category.url"
+        class="list-group-item active">@category.name</a>
+        }
+        else
+        {
+            <a asp-controller="Library" asp-action="List" asp-route-category="@category.url"
+        class="list-group-item">@category.name</a>
+        }
+
+    }
+</div>

@@ -1,0 +1,52 @@
+@model FavListModel
+<h1 style="text-center" class="h3 ">My Favorite Books</h1>
+<hr>
+@if (Model.FavListBooks.Count > 0)
+{
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table hover">
+                <thead>
+                    <tr>
+
+                        <th></th>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.FavListBooks)
+                    {
+                        <tr>
+                            <td>
+                                <img width="80" src="@item.bookImgUrl" alt="">
+                            </td>
+                            <td>@item.bookName</td>
+                            <td>
+                                <form asp-controller="FavList" asp-action="DeleteFromFavList">
+                                    <input type="hidden" name="bookId" value="@item.bookId">
+                                    <button type="submit" class="btn btn-danger btn-sm">
+                                        Delete
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4"></div>
+
+    </div>
+}
+else
+{
+    <div class="row">
+        <div class="col-12">
+            <div class="alert alert-warning">
+                No Books Added
+            </div>
+        </div>
+    </div>
+}

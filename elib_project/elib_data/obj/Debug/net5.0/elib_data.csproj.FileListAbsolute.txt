@@ -1,0 +1,17 @@
+C:\Users\tunah\Desktop\elib_project\elib_data\bin\Debug\net5.0\elib_data.deps.json
+C:\Users\tunah\Desktop\elib_project\elib_data\bin\Debug\net5.0\elib_data.runtimeconfig.json
+C:\Users\tunah\Desktop\elib_project\elib_data\bin\Debug\net5.0\elib_data.runtimeconfig.dev.json
+C:\Users\tunah\Desktop\elib_project\elib_data\bin\Debug\net5.0\elib_data.dll
+C:\Users\tunah\Desktop\elib_project\elib_data\bin\Debug\net5.0\ref\elib_data.dll
+C:\Users\tunah\Desktop\elib_project\elib_data\bin\Debug\net5.0\elib_data.pdb
+C:\Users\tunah\Desktop\elib_project\elib_data\bin\Debug\net5.0\elib_entity.dll
+C:\Users\tunah\Desktop\elib_project\elib_data\bin\Debug\net5.0\elib_entity.pdb
+C:\Users\tunah\Desktop\elib_project\elib_data\obj\Debug\net5.0\elib_data.csproj.AssemblyReference.cache
+C:\Users\tunah\Desktop\elib_project\elib_data\obj\Debug\net5.0\elib_data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tunah\Desktop\elib_project\elib_data\obj\Debug\net5.0\elib_data.AssemblyInfoInputs.cache
+C:\Users\tunah\Desktop\elib_project\elib_data\obj\Debug\net5.0\elib_data.AssemblyInfo.cs
+C:\Users\tunah\Desktop\elib_project\elib_data\obj\Debug\net5.0\elib_data.csproj.CoreCompileInputs.cache
+C:\Users\tunah\Desktop\elib_project\elib_data\obj\Debug\net5.0\elib_data.dll
+C:\Users\tunah\Desktop\elib_project\elib_data\obj\Debug\net5.0\ref\elib_data.dll
+C:\Users\tunah\Desktop\elib_project\elib_data\obj\Debug\net5.0\elib_data.pdb
+C:\Users\tunah\Desktop\elib_project\elib_data\obj\Debug\net5.0\elib_data.genruntimeconfig.cache

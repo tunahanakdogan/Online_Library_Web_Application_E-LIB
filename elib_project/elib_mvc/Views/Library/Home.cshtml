@@ -1,0 +1,42 @@
+@model BookListModel
+@{
+    Layout = "_Layout";
+}
+<div class="col-md-3">
+    @await Component.InvokeAsync("Categories")
+</div>
+<div class="col-md-9">
+    <div class="col">
+        <div class="row">
+            @foreach (var p in Model.books)
+            {
+                <div class="col-md-3">
+                    @await Html.PartialAsync("_Books", p)
+                </div>
+            }
+        </div>
+        <div class="container" style="background-color: white; color:white; heigth:20px;"> aaa</div>
+        <div class="row ">
+            <div class="col ">
+
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+
+                        @for (int i = 0; i < Model.pageInfo.totalPages(); i++)
+                        {
+
+
+
+                            <li class="page-item @(Model.pageInfo.currentPage==i+1?"active":"")">
+                                <a class="page-link" href="/library/@Model.pageInfo.currentCategory/?page=@(i+1)">@(i+1)</a>
+                            </li>
+
+                        }
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

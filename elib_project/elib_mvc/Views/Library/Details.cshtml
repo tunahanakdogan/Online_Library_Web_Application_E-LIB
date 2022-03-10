@@ -1,0 +1,39 @@
+@model BookDetailModel
+<div class="card mb-3">
+    <div class="row no-gutters">
+        <div class="col-md-3 ">
+            <img src="@Model.Book.imgUrl" class="card-img">
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Book.name</h5>
+                @foreach (var item in Model.Categories)
+                {
+                    <a asp-controller="library" asp-action="list" asp-route-category="@item.url"
+                    class="btn btn-link p-0 mb-3">@item.name</a>
+                }
+                <p class="card-text">@Model.Book.author</p>
+
+                <div style="background-color: white; color:white; heigth: 20px" class="container">space</div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form asp-controller="favlist" method="POST" asp-action="addtofavlist">
+                        <input type="hidden" name="bookId" value="@Model.Book.bookId">
+                        <button type="submit" class="btn btn-secondary text-light">Add To Fav</button>
+                    </form>
+                    <div style="color: white;height: 20px;" class="container"></div>
+                    <a target="_blank" href="@Model.Book.bookUrl" class="btn btn-secondary">Read</a>
+
+
+
+                }
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="p-3">@Model.Book.description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+@model RegisterModel
+@{
+    Layout = "_Layout2";
+}
+
+
+<h2>Register</h2>
+<hr>
+
+<form asp-controller="account" asp-action="register" method="POST">
+    <div class="form-group row">
+        <label class="col-sm2 col-form-laber">First Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" asp-for="firstName">
+            <span asp-validation-for="firstName" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm2 col-form-laber">Last Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" asp-for="lastName">
+            <span asp-validation-for="lastName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm2 col-form-laber">User Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" asp-for="userName">
+            <span asp-validation-for="userName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm2 col-form-laber">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" asp-for="password">
+            <span asp-validation-for="password" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm2 col-form-laber">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" asp-for="email">
+            <span asp-validation-for="email" class="text-danger"></span>
+        </div>
+    </div>
+    <div style="background-color: white; color:white; heigth: 20px" class="container">space</div>
+    <div class="form-group row">
+
+        <button style="width: 500px;" type="submit" class="btn btn-warning mx-auto">Register</button>
+
+    </div>
+</form>

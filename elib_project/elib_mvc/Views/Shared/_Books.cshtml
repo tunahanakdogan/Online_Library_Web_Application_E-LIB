@@ -1,0 +1,30 @@
+@model Book
+
+<div class="card mt-2">
+    <img style="min-width: 194; " width="194" height="270" class=" card-img-top" src="@Model.imgUrl" alt="">
+    <div class="card-body">
+        <h5 class="card-title">@Model.name</h5>
+
+
+    </div>
+    <div class="card-footer text-center">
+        <div class="row">
+            <div class="col">
+                <a asp-controller="library" asp-action="details" asp-route-url="@Model.url"
+                    style="background-color: gray;" class="btn btn-sm  text-light">Details</a>
+
+
+            </div>
+            <div class="col">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form asp-controller="favlist" method="POST" asp-action="addtofavlist">
+                        <input type="hidden" name="bookId" value="@Model.bookId">
+                        <button type="submit" style="background-color: #4f6aa3 ;" class="btn btn-sm text-light">Add
+                        </button>
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="navbar navbar-dark navbar-expand-sm" style="background-color: #1F1D36;">
+    <div class="container">
+        <a asp-controller="home" asp-action="index" class="navbar-brand fs-1 ">E-LIB</a>
+        <ul class="navbar-nav mr-auto">
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                if (!User.IsInRole("Admin"))
+                {
+                    <li class="nav-item">
+                        <a asp-controller="home" asp-action="index" style="padding-right: 40px;"
+                    class=" nav-link fs-5 ">Books</a>
+                    </li>
+                }
+                <li class="nav-item">
+                    <a asp-controller="FavList" asp-action="index" style="padding-right: 40px;" class=" nav-link fs-5">My
+                        Books
+                    </a>
+                </li>
+
+
+                if (User.IsInRole("Admin"))
+                {
+                    <li class="nav-item">
+                        <a asp-controller="admin" asp-action="list" style="padding-right: 40px;" class=" nav-link fs-5">
+                            Books</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a asp-controller="admin" asp-action="categorylist" style="padding-right: 40px;"
+                    class=" nav-link fs-5">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="admin" asp-action="rolelist" style="padding-right: 40px;"
+                    class=" nav-link fs-5 ">Roles</a>
+                    </li>
+
+                }
+            }
+        </ul>
+
+
+
+        <ul class="navbar-nav ml-auto">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li class="nav-item">
+                    <a href="#" style="padding-right: 40px;" class=" nav-link fs-5 ">@User.Identity.Name</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/account/logout" style="padding-right: 40px;" class=" nav-link fs-5 ">Logout</a>
+                </li>
+
+            }
+            else
+            {
+                <li class="nav-item">
+                    <a href="/account/login" style="padding-right: 40px;" class=" nav-link fs-5 ">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/account/register" style="padding-right: 40px;" class=" nav-link fs-5 ">Register</a>
+                </li>
+            }
+
+
+        </ul>
+
+    </div>
+</div>

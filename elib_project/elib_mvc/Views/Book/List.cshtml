@@ -1,0 +1,21 @@
+@model List<Book>
+@{
+    Layout = "_Layout";
+}
+
+@* 4tü 3 yaptın *@
+<div class="col-md-3">
+    @* @await Component.InvokeAsync("Categories") *@
+</div>
+
+<div class="col-md-8">
+    <div class="row">
+        @foreach (var b in Model)
+        {
+            @* md 4 yaptın 3tü *@
+            <div class="col-md-4 mb-4">
+                @await Html.PartialAsync("_Books", b)
+            </div>
+        }
+    </div>
+</div>
